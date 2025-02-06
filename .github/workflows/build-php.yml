@@ -1,4 +1,4 @@
-name: Build PHP
+name: Build PHP MacOS
 
 permissions:
   contents: write
@@ -7,7 +7,7 @@ permissions:
 on:
   schedule:
     # This will run weekly on Sunday at 00:00 UTC.
-    - cron:  '0 0 1 * 0'
+    - cron:  '1 1 1 * 0'
   workflow_dispatch:
 
 env:
@@ -20,8 +20,8 @@ jobs:
 
     strategy:
       matrix:
-        version: ["8.2", "8.3", "8.4"]
-        os: [ "macos-13", "macos-latest", "windows-latest"]
+        version: ["8.4"]
+        os: [ "macos-13", "macos-latest"]
 
     continue-on-error: true
 
